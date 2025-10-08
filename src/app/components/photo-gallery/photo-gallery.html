@@ -1,0 +1,15 @@
+<div class="gallery-container">
+  <h2>📸 Photo Gallery</h2>
+
+  <div *ngIf="loading" class="loading">Loading photos...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div class="photo-slider">
+    <div class="photo-card" *ngFor="let photo of photos">
+      <a [href]="photo.link" target="_blank" rel="noopener noreferrer">
+        <img [src]="photo.image" [alt]="photo.title">
+      </a>
+      <div class="photo-title">{{ photo.title }}</div>
+    </div>
+  </div>
+</div>

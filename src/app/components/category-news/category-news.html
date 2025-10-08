@@ -1,0 +1,16 @@
+<nav class="categories" [class.active]="menuOpen">
+  <!-- Toggle button only for mobile -->
+  <div class="cat-toggle" (click)="toggleMenu()">
+    ವಿಭಾಗಗಳು <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <ul class="cat-list">
+    <li *ngFor="let c of categories">
+      <a [routerLink]="c.route"
+         routerLinkActive="active"
+         (click)="closeMenu()">
+         {{ c.label }}
+      </a>
+    </li>
+  </ul>
+</nav>

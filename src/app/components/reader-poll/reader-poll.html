@@ -1,0 +1,40 @@
+<section class="poll-section">
+  <h2 class="section-title">🗳️ ಓದುಗರ ಅಭಿಪ್ರಾಯ</h2>
+
+  <div class="poll-grid">
+    <div *ngFor="let poll of polls" class="poll-card">
+      <h3>{{ poll.question }}</h3>
+
+      <!-- Before vote -->
+      <div *ngIf="!poll.voted; else resultBlock">
+        <div class="options">
+          <button
+            *ngFor="let option of poll.options; let i = index"
+            (click)="vote(poll, i)"
+            [disabled]="poll.voted"
+            [class.selected]="poll.selectedIndex === i"
+          >
+            {{ option.label }}
+          </button>
+        </div>
+      </div>
+
+      <!-- After vote -->
+      <ng-template #resultBlock>
+        <div class="results">
+          <div *ngFor="let option of poll.options" class="result-row">
+            <span class="opt-label">{{ option.label }}</span>
+            <div class="bar">
+              <div
+                class="bar-fill"
+                [style.width.%]="getPercentage(poll, option)"
+              ></div>
+            </div>
+            <span class="percent">{{ getPercentage(poll, option) }}%</span>
+          </div>
+          <p class="total">ಒಟ್ಟು ಮತಗಳು: {{ getTotalVotes(poll) }}</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>

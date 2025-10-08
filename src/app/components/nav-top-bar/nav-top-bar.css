@@ -1,0 +1,139 @@
+.topbar {
+  height: 52px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212; /* softer than pure black */
+  border-bottom: 1px solid #1f1f1f;
+  padding: 0 16px;
+  color: #ffffff;
+  flex-wrap: wrap;
+}
+
+/* Left section */
+.topbar .left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.weather .temp {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.datetime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+/* Center (search) */
+.center {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-box {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 16px;
+  background: #1c1c1c;
+  color: #ffffff;
+  font-size: 13px;
+  width: 340px;
+  max-width: 100%;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.search-box:focus {
+  border-color: #4da6ff;
+  background: #222;
+}
+
+.search-box::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  color: #eaeaea;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.search-btn:hover {
+  color: #4da6ff;
+}
+
+/* Right section */
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  color: #eaeaea;
+  font-size: 16px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  color: #4da6ff;
+  transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .search-box {
+    width: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    height: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .left,
+  .center,
+  .socials {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .datetime {
+    display: none;
+  }
+
+  .search-box {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .social-link {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="section-title">📢 All Vehicle News</h2>
+
+  <div class="grid">
+    <a *ngFor="let news of news"
+       class="card"
+       [href]="news.guid || news.link"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img [src]="news.image || 'assets/placeholder.jpg'" alt="{{news.title}}">
+      <h2>{{ news.title }}</h2>
+      <p class="date">{{ news.pubDate | date:'mediumDate' }}</p>
+    </a>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="page === 1">⬅ Previous</button>
+    <span>Page {{ page }} of {{ totalPages }}</span>
+    <button (click)="nextPage()" [disabled]="page === totalPages">Next ➡</button>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.trending-news { margin-top: 24px; }
+    .trending-news h2 { font-size: 1.6rem; }
+    .trending-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+    .trending-item {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    .trending-item:hover { background-color: #f9f9f9; }

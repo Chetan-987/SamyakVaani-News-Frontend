@@ -1,0 +1,31 @@
+<div class="category-row">
+  <!-- Sports -->
+  <div class="category-block sports">
+    <h2 class="category-title">🏏 ಕ್ರಿಕೆಟ್</h2>
+    <ul>
+      <li *ngFor="let item of sports">
+        <a [href]="item.link" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Astrology -->
+  <div class="category-block astrology">
+    <h2 class="category-title">🔮 ಜ್ಯೋತಿಷ್ಯ</h2>
+    <ul>
+      <li *ngFor="let item of movies">
+        <a [href]="item.link" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- World -->
+  <div class="category-block world">
+    <h2 class="category-title">🌍 ಅಂತಾರಾಷ್ಟ್ರೀಯ</h2>
+    <ul>
+      <li *ngFor="let item of world">
+        <a [href]="item.link" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

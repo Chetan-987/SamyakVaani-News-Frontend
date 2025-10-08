@@ -1,0 +1,77 @@
+.category-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 40px 0;
+}
+
+/* Modern category cards */
+.category-block {
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+}
+
+/* Category header */
+.category-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f04e30;
+  color: #222;
+}
+
+/* News list */
+.category-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-block li {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0; /* ✅ line separator */
+}
+
+.category-block li:last-child {
+  border-bottom: none;
+}
+
+/* Links */
+.category-block a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.category-block a:hover {
+  color: #f04e30;
+}
+
+/* Optional different tints for categories */
+.sports { background: #fef8f5; }      /* light orange tint */
+.astrology { background: #f9f7ff; }   /* light purple tint */
+.world { background: #f5faff; }       /* light blue tint */
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .category-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .category-row {
+    grid-template-columns: 1fr;
+  }
+}

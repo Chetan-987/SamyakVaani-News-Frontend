@@ -1,0 +1,22 @@
+<footer class="modern-footer">
+  <div class="footer-top">
+    <div class="footer-logo">
+      <img src="assets/new.png" alt="Samyak Vaani Logo">
+    </div>
+    <p class="footer-tagline">
+      ನಿಖರವಾದ ಕನ್ನಡ ಸುದ್ದಿ — ನಿಮ್ಮ ವಿಶ್ವಾಸದ ತಾಣ <strong>ಸಮ್ಯಕ್ ವಾಣಿ</strong>
+    </p>
+    <div class="social-icons">
+      <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener">
+        <i [class]="link.icon"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="copyright">
+      © 2025 <strong>SAMYAK VAANI</strong>. All Rights Reserved.
+    </p>
+    <p class="editor">Editor - <strong>Sheelanand Goure</strong></p>
+  </div>
+</footer>

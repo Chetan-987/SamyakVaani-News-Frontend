@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="all-videos-page">
+    <h1 class="page-title">🎥 All Videos</h1>
+
+    <div *ngIf="loading" class="loading">Loading...</div>
+
+    <div class="video-row">
+      <div class="video-card" *ngFor="let v of videos">
+        <a [href]="'https://www.youtube.com/watch?v=' + v.videoId" target="_blank">
+          <div class="thumbnail-wrapper">
+            <img [src]="v.thumbnail" [alt]="v.title" />
+            <div class="play-overlay">▶</div>
+          </div>
+          <h3 class="video-title">{{ v.title }}</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button (click)="prevPage()" [disabled]="!prevPageToken">⬅ Previous</button>
+    <span>Page {{ page }}</span>
+    <button (click)="nextPage()" [disabled]="!nextPageToken">Next ➡</button>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <h2 class="title">Admin Login</h2>
+    <form (submit)="login(); $event.preventDefault()">
+      <!-- Username -->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Enter your username"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <!-- Error message -->
+      <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+      <!-- Button -->
+      <button type="submit" [disabled]="isLoading">
+        {{ isLoading ? 'Logging in...' : 'Login' }}
+      </button>
+    </form>
+  </div>
+</div>

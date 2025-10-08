@@ -1,0 +1,27 @@
+<div class="video-section">
+  <h2 class="section-title">🎥 ಪ್ರಮುಖ ವಿಡಿಯೋಗಳು</h2>
+  <div class="video-row">
+    <div class="video-card" *ngFor="let v of videos">
+      <a [href]="'https://www.youtube.com/watch?v=' + v.videoId" target="_blank">
+        <div class="thumbnail-wrapper">
+          <img [src]="v.thumbnail" [alt]="v.title" />
+          <div class="play-overlay">▶</div>
+        </div>
+        <h3 class="video-title">{{ v.title }}</h3>
+      </a>
+    </div>
+  </div>
+
+  <!-- View all button -->
+  <div class="view-all">
+  <a 
+    href="https://www.youtube.com/@SamyakVaani1" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="view-all-link">
+    View All Videos →
+  </a>
+</div>
+
+</div>
+

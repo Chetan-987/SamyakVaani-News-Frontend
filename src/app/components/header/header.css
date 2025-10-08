@@ -1,0 +1,51 @@
+.top-sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.news-title {
+  /* background: linear-gradient(90deg, #1a237e, #0d47a1);  */
+  background-color: #c8c4c4;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: bold;
+  height: 100px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* .news-title img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+} */
+
+.news-title img {
+  max-height: 70px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.news-title h1 {
+  margin: 0;
+  font-family: "Noto Sans Kannada", "Tunga", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.category-component {
+  background: #f9f9f9;
+  /* padding: 10px 0; */
+}
+
+.title-text {
+  color: red;
+}

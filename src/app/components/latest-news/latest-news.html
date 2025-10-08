@@ -1,0 +1,18 @@
+<section class="latest-news container">
+  <div class="grid">
+    <a *ngFor="let news of latest"
+       class="card"
+       [href]="news.guid || news.link"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img [src]="news.image || 'assets/placeholder.jpg'" alt="{{news.title}}">
+      <h2>{{ news.title }}</h2>
+      <p class="date">{{ news.pubDate | date:'mediumDate' }}</p>
+    </a>
+  </div>
+
+  <!-- View all link -->
+  <div class="see-all">
+    <a routerLink="/latest">➡ View all Latest News</a>
+  </div>
+</section>

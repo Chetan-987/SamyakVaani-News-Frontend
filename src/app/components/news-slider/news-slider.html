@@ -1,0 +1,12 @@
+
+<div class="slider" *ngIf="items.length">
+  <div class="slide">
+    <img [src]="items[idx].image || 'assets/placeholder.jpg'" alt="{{items[idx].title}}" />
+    <div class="overlay">
+      <h2 class="title">{{ items[idx].title }}</h2>
+    </div>
+
+    <button class="prev" (click)="prev()">‹</button>
+    <button class="next" (click)="next()">›</button>
+  </div>
+</div>

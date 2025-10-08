@@ -1,0 +1,34 @@
+.slider { position: relative; margin-top:16px; }
+.slide { position: relative; overflow: hidden; border-radius:8px; }
+.slide img {
+  width: 100%;
+  height: 520px;
+  object-fit: fill;
+  display:block;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 100%);
+}
+.title {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.prev { left: 12px; }
+.next { right: 12px; }

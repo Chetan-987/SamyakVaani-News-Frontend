@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+/* @import "~@fortawesome/fontawesome-free/css/all.css"; */
+
+body {
+  font-family: 'Noto Sans Kannada', Arial, sans-serif; /* for body text */
+  background: silver;
+  color: #111;
+}
+
+.news-title, h2, h3, p {
+  font-family: 'Baloo Tamma 2', 'Noto Serif Kannada', serif; /* for titles */
+  font-weight: 700;
+  color: #000000;
+}

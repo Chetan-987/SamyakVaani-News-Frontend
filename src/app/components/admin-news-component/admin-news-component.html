@@ -1,0 +1,63 @@
+<div class="add-news-container">
+  <h2>📰 Add News</h2>
+
+  <form (ngSubmit)="onSubmit()" #newsForm="ngForm">
+    <!-- Title -->
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" [(ngModel)]="news.title" name="title" required />
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label>Description</label>
+      <textarea [(ngModel)]="news.description" name="description" required></textarea>
+    </div>
+
+    <!-- Category -->
+    <div class="form-group">
+      <label>Category</label>
+      <input type="text" [(ngModel)]="news.category" name="category" required />
+    </div>
+
+    <!-- Source Link -->
+    <div class="form-group">
+      <label>Source Link (Optional)</label>
+      <input type="url" [(ngModel)]="news.link" name="link" placeholder="https://example.com" />
+    </div>
+
+    <!-- Image Upload -->
+    <div class="form-group image-upload">
+      <label>Image</label>
+
+      <div class="image-input-wrapper">
+        <input
+          type="url"
+          [(ngModel)]="news.image"
+          name="image"
+          placeholder="Enter or select image"
+        />
+        <button type="button" class="icon-btn" (click)="openFilePicker()" title="Select image">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <input
+          type="file"
+          #fileInput
+          accept="image/*"
+          (change)="onImageSelected($event)"
+          hidden
+        />
+      </div>
+
+      <div *ngIf="previewUrl" class="preview">
+        <img [src]="previewUrl" alt="Preview" />
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!newsForm.form.valid">➕ Add News</button>
+  </form>
+
+  <div *ngIf="message" [class.success]="isSuccess" [class.error]="!isSuccess">
+    {{ message }}
+  </div>
+</div>

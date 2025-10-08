@@ -1,0 +1,32 @@
+<div class="topbar">
+  <!-- Left section: Weather + Date/Time -->
+  <div class="left">
+    <div class="weather">
+      <i class="fa-solid fa-cloud" style="color: #4da6ff;"></i>
+      <span>{{ weather.city }}</span>
+      <span *ngIf="weather.temp" class="temp">{{ weather.temp }}°C</span>
+    </div>
+
+    <div class="datetime" *ngIf="!isMobile">
+      <i class="fa-solid fa-clock" style="color: #4da6ff;"></i>
+      {{ getDateString() }} {{ getTimeString() }}
+    </div>
+  </div>
+
+  <!-- Center section: Search -->
+  <div class="center">
+    <input type="text" placeholder="Search news..." class="search-box" />
+    <button class="search-btn"><i class="fas fa-search"></i></button>
+  </div>
+
+  <!-- Right section: Social links -->
+  <div class="socials">
+    <a *ngFor="let s of socialLinks"
+       [href]="s.url"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-link">
+       <i [class]="s.icon"></i>
+    </a>
+  </div>
+</div>
