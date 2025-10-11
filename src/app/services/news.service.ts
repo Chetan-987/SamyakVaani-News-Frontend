@@ -94,6 +94,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
 import { News } from '../models/news.model';
+import { environment } from '../environment/environment';
 
 export interface PagedResponse<T> {
   page: number;
@@ -107,7 +108,8 @@ export interface PagedResponse<T> {
   providedIn: 'root'
 })
 export class NewsService {
-  private base = '/api/news';
+  //private base = '/api/news';
+  private base = `${environment.apiBase}/news`;
 
   constructor(private http: HttpClient) {}
 
