@@ -21,7 +21,7 @@ export class CategoryNews {
   }
 
   categories = [
-    { label: 'ಮುಖ್ಯ ಸುದ್ದಿಗಳು', route: 'top-stories' },
+    { label: 'ಮುಖ್ಯ ಸುದ್ದಿಗಳು', route: '' },
     { label: 'ತಾಜಾ ಸುದ್ದಿ', route: 'latest' },
     { label: 'ಕ್ರೀಡೆ', route: 'sports' },
     { label: 'ತಂತ್ರಜ್ಞಾನ', route: 'tech' },

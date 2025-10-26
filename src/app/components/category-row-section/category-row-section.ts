@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-category-row-section',
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule],
   standalone: true,
   templateUrl: './category-row-section.html',
   styleUrl: './category-row-section.css'

@@ -19,7 +19,7 @@ export class NewsSlider {
   constructor(private newsService: NewsService, private cdr: ChangeDetectorRef ) {}
 
   ngOnInit(): void {
-    this.newsService.getLatest(12).subscribe({
+    this.newsService.getLatest(20).subscribe({
       next: (items) => {
         this.items = items.items || [];
         this.idx = 0;

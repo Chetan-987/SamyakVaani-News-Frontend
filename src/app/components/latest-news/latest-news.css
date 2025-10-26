@@ -93,3 +93,68 @@
 .see-all a:active {
   background-color: #00408d;   /* pressed state */
 }
+
+/* ✅ Responsive adjustments */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  .latest-news h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .see-all a {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .card {
+    border-radius: 4px;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .card h2 {
+    font-size: 0.95rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+
+  .see-all a {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}

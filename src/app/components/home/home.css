@@ -73,4 +73,78 @@
   height: 70px;
 }
 
+/* Laptops and larger (>=1025px) — keep row layout */
+@media (min-width: 1025px) {
+  .content-area {
+    flex-direction: row;
+  }
+  .main-content {
+    flex: 0 0 66%;
+  }
+  .sidebar {
+    flex: 0 0 32%;
+    border-left: 3px solid #f04e30;
+    border-top: none;
+  }
+}
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+  .content-area {
+    flex-direction: column;
+  }
+  .main-content, .sidebar {
+    flex: 100%;
+    width: 100%;
+  }
+  .sidebar {
+    border-left: none;
+    border-top: 3px solid #f04e30;
+  }
+}
+
+/* Mobiles (below 768px) */
+@media (max-width: 768px) {
+  .content-area {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .main-content, .sidebar {
+    flex: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .section-title {
+    font-size: 18px;
+  }
+  .news-card {
+    flex-direction: column;
+  }
+  .news-card img {
+    width: 100%;
+    height: auto;
+  }
+  .news-card h3 {
+    font-size: 15px;
+  }
+  .news-card p {
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 480px) {
+  .body-section {
+    padding: 5px;
+  }
+  .section-title {
+    font-size: 16px;
+  }
+  .news-card {
+    gap: 8px;
+  }
+  .news-card h3 {
+    font-size: 14px;
+  }
+}
 

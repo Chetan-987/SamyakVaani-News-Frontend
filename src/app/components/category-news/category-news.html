@@ -6,11 +6,12 @@
 
   <ul class="cat-list">
     <li *ngFor="let c of categories">
-      <a [routerLink]="c.route"
-         routerLinkActive="active"
-         (click)="closeMenu()">
-         {{ c.label }}
-      </a>
-    </li>
+  <a [routerLink]="c.route"
+     routerLinkActive="active"
+     [routerLinkActiveOptions]="{ exact: c.route === '' }"
+     (click)="closeMenu()">
+     {{ c.label }}
+  </a>
+</li>
   </ul>
 </nav>

@@ -8,6 +8,7 @@ export class YoutubeFetchVideos {
   constructor(private http: HttpClient) {}
 
   getVideos() {
+    console.log("Called")
     return this.http.get<any[]>('/api/youtube/videos?handle=@SamyakVaani1');
   }
 
