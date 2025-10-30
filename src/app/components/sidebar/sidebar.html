@@ -1,12 +1,12 @@
-<div class="sidebar-container">
+<!-- <div class="sidebar-container">
   <h3 class="section-title">📍 ಸ್ಥಳೀಯ ಸುದ್ದಿ (Local News)</h3>
 
-  <!-- Show a message when there’s no news -->
+ 
   <div *ngIf="local_news.length === 0" class="empty-state">
     ಯಾವುದೇ ಸ್ಥಳೀಯ ಸುದ್ದಿ ಇಲ್ಲ (No local news available)
   </div>
   
-  <!-- Show the list when there’s data -->
+  
   <ul *ngIf="local_news.length > 0" class="news-list">
     <li *ngFor="let n of local_news" class="news-item">
       <h4 class="news-title">
@@ -16,7 +16,7 @@
         <span *ngIf="!n.link">{{ n.title }}</span>
       </h4>
 
-      <!-- Optional image preview -->
+      
       <div *ngIf="n.image" class="news-image">
         <img [src]="n.image" alt="{{ n.title }}" />
       </div>
@@ -25,4 +25,25 @@
       <small class="news-date">{{ n.pubDate | date: 'mediumDate' }}</small>
     </li>
   </ul>
-</div>
+</div> -->
+
+
+<ul *ngIf="local_news.length > 0" class="news-list">
+  <li *ngFor="let n of local_news" class="news-item">
+    <div class="news-content">
+      <div *ngIf="n.image" class="thumbnail">
+        <img [src]="n.image" alt="video thumbnail">
+      </div>
+      <div class="news-text">
+        <h4 class="news-title">
+          <a *ngIf="n.link" [href]="n.link" target="_blank" rel="noopener noreferrer">
+            {{ n.title }}
+          </a>
+          <span *ngIf="!n.link">{{ n.title }}</span>
+        </h4>
+        <!-- <p class="news-desc">{{ n.description }}</p> -->
+        <small class="news-date">{{ n.pubDate | date: 'mediumDate' }}</small>
+      </div>
+    </div>
+  </li>
+</ul>

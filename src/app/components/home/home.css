@@ -23,7 +23,7 @@
   flex: 0 0 32%;
   padding: 10px;
   overflow-y: scroll;
-  height: 1025px;
+  /* height: 1025px; */
   background: #fafafa;
   border-left: 3px solid #f04e30;
   border-radius: 8px;
